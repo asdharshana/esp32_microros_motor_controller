@@ -63,7 +63,7 @@ Upload the sketch to the ESP32.
 ### 2. Pull the Docker Image
 
 ```bash
-docker pull microros/micro-ros-agent:humble
+docker pull microros/micro-ros-agent:jazzy
 ```
 
 ---
@@ -71,25 +71,25 @@ docker pull microros/micro-ros-agent:humble
 ### 3. Run the micro-ROS Agent
 
 ```bash
-docker run --rm -it --net=host microros/micro-ros-agent:humble udp4 --port 8888
+docker run --rm -it --net=host microros/micro-ros-agent:jazzy udp4 --port 8888
 ```
 
 ---
 
 ### 4. Start a ROS 2 Container
 
-Run a ROS 2 Humble container:
+Run a ROS 2 jazzy container:
 
 ```bash
-docker run --rm -it --net=host osrf/ros:humble-desktop
+docker run --rm -it --net=host osrf/ros:jazzy-desktop
 ```
 
 Inside the container:
 
 ```bash
 apt update
-apt install -y ros-humble-teleop-twist-keyboard
-source /opt/ros/humble/setup.bash
+apt install -y ros-jazzy-teleop-twist-keyboard
+source /opt/ros/jazzy/setup.bash
 ```
 
 ---
